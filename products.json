@@ -1,0 +1,246 @@
+[{
+  "name": "oryginalne sandały",
+  "category": "buty",
+  "unit_price": 20,
+  "quantity": 2,
+  "shop": "shop1",
+  "date_sale": "2018-01-10"
+},{
+  "name": "oryginalne sandały",
+  "category": "buty",
+  "unit_price": 20,
+  "quantity": 1,
+  "shop": "shop2",
+  "date_sale": "2018-01-10"
+},{
+  "name": "oryginalne sandały",
+  "category": "buty",
+  "unit_price": 20,
+  "quantity": 4,
+  "shop": "shop1",
+  "date_sale": "2018-01-11"
+},{
+  "name": "oryginalne sandały",
+  "category": "buty",
+  "unit_price": 1,
+  "quantity": 4,
+  "shop": "shop1",
+  "date_sale": "2018-01-21"
+},{
+  "name": "oryginalne sandały",
+  "category": "buty",
+  "unit_price": 20,
+  "quantity": 2,
+  "shop": "shop1",
+  "date_sale": "2018-02-10"
+},{
+  "name": "czerwone obcasy",
+  "category": "buty",
+  "unit_price": 42,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-02-12"
+},{
+  "name": "czerwone obcasy",
+  "category": "buty",
+  "unit_price": 42,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-02-12"
+},{
+  "name": "czerwone obcasy",
+  "category": "buty",
+  "unit_price": 42,
+  "quantity": 1,
+  "shop": "shop2",
+  "date_sale": "2018-02-13"
+},{
+  "name": "czerwone obcasy",
+  "category": "buty",
+  "unit_price": 42,
+  "quantity": 2,
+  "shop": "shop2",
+  "date_sale": "2018-02-14"
+},{
+  "name": "czerwone obcasy",
+  "category": "buty",
+  "unit_price": 40,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-03-01"
+},{
+  "name": "czerwone obcasy",
+  "category": "buty",
+  "unit_price": 40,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-03-02"
+},{
+  "name": "czerwone obcasy",
+  "category": "buty",
+  "unit_price": 40,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-03-03"
+},{
+  "name": "trampki",
+  "category": "buty",
+  "unit_price": 12,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-01-02"
+},{
+  "name": "trampki",
+  "category": "buty",
+  "unit_price": 12,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-01-04"
+},{
+  "name": "trampki",
+  "category": "buty",
+  "unit_price": 12,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-01-05"
+},{
+  "name": "trampki",
+  "category": "buty",
+  "unit_price": 12,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-02-02"
+},{
+  "name": "trampki",
+  "category": "buty",
+  "unit_price": 10,
+  "quantity": 2,
+  "shop": "shop2",
+  "date_sale": "2018-03-02"
+},{
+  "name": "trampki",
+  "category": "buty",
+  "unit_price": 12,
+  "quantity": 1,
+  "shop": "shop2",
+  "date_sale": "2018-01-02"
+},{
+  "name": "zółte pszczółki",
+  "category": "skarpety",
+  "unit_price": 4,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-01-02"
+},{
+  "name": "zółte pszczółki",
+  "category": "skarpety",
+  "unit_price": 2,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-01-16"
+},{
+  "name": "zółte pszczółki",
+  "category": "skarpety",
+  "unit_price": 1,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-01-22"
+},{
+  "name": "zółte pszczółki",
+  "category": "skarpety",
+  "unit_price": 4,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-02-02"
+},{
+  "name": "zółte pszczółki",
+  "category": "skarpety",
+  "unit_price": 4,
+  "quantity": 10,
+  "shop": "shop2",
+  "date_sale": "2018-01-02"
+},{
+  "name": "zółte pszczółki",
+  "category": "skarpety",
+  "unit_price": 4,
+  "quantity": 1,
+  "shop": "shop2",
+  "date_sale": "2018-02-02"
+},{
+  "name": "zółte pszczółki",
+  "category": "skarpety",
+  "unit_price": 14,
+  "quantity": 1,
+  "shop": "shop2",
+  "date_sale": "2018-03-02"
+},{
+  "name": "zółte pszczółki",
+  "category": "skarpety",
+  "unit_price": 4,
+  "quantity": 3,
+  "shop": "shop2",
+  "date_sale": "2018-02-12"
+},{
+  "name": "zółte pszczółki",
+  "category": "skarpety",
+  "unit_price": 1.50,
+  "quantity": 2,
+  "shop": "shop1",
+  "date_sale": "2018-02-28"
+},{
+  "name": "czerwone w kratkę",
+  "category": "skarpety",
+  "unit_price": 2,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-01-02"
+},{
+  "name": "czerwone w kratkę",
+  "category": "skarpety",
+  "unit_price": 2,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-01-03"
+},{
+  "name": "czerwone w kratkę",
+  "category": "skarpety",
+  "unit_price": 2,
+  "quantity": 1,
+  "shop": "shop1",
+  "date_sale": "2018-01-08"
+},{
+  "name": "czerwone w kratkę",
+  "category": "skarpety",
+  "unit_price": 2,
+  "quantity": 4,
+  "shop": "shop1",
+  "date_sale": "2018-02-02"
+},{
+  "name": "czerwone w kratkę",
+  "category": "skarpety",
+  "unit_price": 2,
+  "quantity": 3,
+  "shop": "shop1",
+  "date_sale": "2018-03-02"
+},{
+  "name": "czerwone w kratkę",
+  "category": "skarpety",
+  "unit_price": 2,
+  "quantity": 1,
+  "shop": "shop2",
+  "date_sale": "2018-01-23"
+},{
+  "name": "czerwone w kratkę",
+  "category": "skarpety",
+  "unit_price": 2,
+  "quantity": 1,
+  "shop": "shop2",
+  "date_sale": "2018-02-02"
+},{
+  "name": "czerwone w kratkę",
+  "category": "skarpety",
+  "unit_price": 2,
+  "quantity": 1,
+  "shop": "shop2",
+  "date_sale": "2018-03-02"
+}]
