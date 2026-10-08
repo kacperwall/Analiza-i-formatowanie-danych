@@ -87,6 +87,13 @@ SIGNATURES = [
 
 PRINTER_HINT = re.compile(r"print|jetdirect|laser|officejet|kyocera|brother|xerox|lexmark|canon", re.I)
 
+# Porty, które używają HTTP jako TRANSPORTU, ale nie są panelami przeglądarkowymi.
+# Nmap oznacza je usługą z "http" w nazwie, więc trzeba je jawnie wykluczyć.
+EXCLUDE_PORTS = {
+    "5985",   # WinRM HTTP (WS-Management) — nie panel web
+    "5986",   # WinRM HTTPS — nie panel web
+}
+
 
 def ctx_insecure():
     c = ssl.create_default_context()
@@ -152,6 +159,8 @@ def targets_from_gnmap(path):
                 port, state, proto, _, name = f[0], f[1], f[2], f[3], f[4]
                 if state != "open":
                     continue
+                if port in EXCLUDE_PORTS:          # WinRM itd. — nie panele web
+                    continue
                 svc = name.lower()
                 if "http" not in svc and port not in ("80", "443", "8080", "8443", "10443", "10080"):
                     continue
@@ -180,6 +189,8 @@ def targets_from_xml(path):
             if (p.find("state") is None) or p.find("state").get("state") != "open":
                 continue
             port = p.get("portid")
+            if port in EXCLUDE_PORTS:              # WinRM itd. — nie panele web
+                continue
             svc = p.find("service")
             name = (svc.get("name") if svc is not None else "") or ""
             tunnel = (svc.get("tunnel") if svc is not None else "") or ""
@@ -196,6 +207,11 @@ def targets_from_ips(path):
         for line in fh:
             ip = line.strip()
             if not ip:
+                continue
+            # jeśli linia jest już URL-em (np. ktoś podał web_live.txt pod --ips),
+            # nie dokładaj http+https — weź ją taką, jaka jest. Bez tego robi się x2.
+            if ip.startswith(("http://", "https://")):
+                out.append(ip)
                 continue
             out.append(f"http://{ip}/")
             out.append(f"https://{ip}/")
@@ -249,14 +265,6 @@ def main():
 
     print(f"[i] Celów web: {len(urls)}")
 
-    # tryb "tylko otwórz"
-    if args.open_only:
-        open_in_firefox(urls)
-        return
-
-    os.makedirs(args.outdir, exist_ok=True)
-    results = []
-
     def work(url):
         try:
             status, headers, title, realm = fetch(url, args.timeout, args.insecure)
@@ -271,6 +279,20 @@ def main():
         except Exception:
             # ostatnia linia obrony — jeden host nigdy nie wywraca całego skanu
             return (url, None, {}, "", "", None, None)
+
+    # tryb "tylko otwórz" — NAJPIERW sprawdź co żyje, otwórz WYŁĄCZNIE odpowiadające
+    if args.open_only:
+        live_only = []
+        with cf.ThreadPoolExecutor(max_workers=args.workers) as ex:
+            for r in ex.map(work, urls):
+                if r[1] is not None:          # status != None => host odpowiedział
+                    live_only.append(r[0])
+        print(f"[i] Odpowiedziało: {len(live_only)}/{len(urls)} — otwieram tylko żywe")
+        open_in_firefox(sorted(live_only))
+        return
+
+    os.makedirs(args.outdir, exist_ok=True)
+    results = []
 
     with cf.ThreadPoolExecutor(max_workers=args.workers) as ex:
         for r in ex.map(work, urls):
